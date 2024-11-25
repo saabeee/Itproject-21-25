@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Library System</h1>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a book..." />
+        <button onclick="searchBook()">Search</button>
+        <button onclick="resetTable()">Reset</button>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <label for="filter">Filter by Availability: </label>
+        <select id="filter" onchange="filterTable()">
+            <option value="all">All</option>
+            <option value="available">Available</option>
+            <option value="unavailable">Unavailable</option>
+        </select>
+    </div>
+
+    <!-- Book Table -->
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Book Name</th>
+                <th onclick="sortTable(1)">Author</th>
+                <th onclick="sortTable(2)">Availability</th>
+                <th>Borrower</th>
+                <th onclick="sortTable(4)">Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Original Books -->
+            <tr>
+                <td>The Great Gatsby</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+                <td class="unavailable">Unavailable</td>
+                <td>John Doe</td>
+                <td>2024-12-01</td>
+            </tr>
+            <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>Harper Lee</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>The Catcher in the Rye</td>
+                <td>J.D. Salinger</td>
+                <td class="unavailable">Unavailable</td>
+                <td>Jane Smith</td>
+                <td>2024-12-05</td>
+            </tr>
+
+            <!-- New Books -->
+            <tr>
+                <td>Pride and Prejudice</td>
+                <td>Jane Austen</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>The Hobbit</td>
+                <td>J.R.R. Tolkien</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>War and Peace</td>
+                <td>Leo Tolstoy</td>
+                <td class="unavailable">Unavailable</td>
+                <td>Michael Brown</td>
+                <td>2024-12-10</td>
+            </tr>
+            <tr>
+                <td>The Alchemist</td>
+                <td>Paulo Coelho</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Brave New World</td>
+                <td>Aldous Huxley</td>
+                <td class="unavailable">Unavailable</td>
+                <td>Emily Clark</td>
+                <td>2024-12-15</td>
+            </tr>
+            <tr>
+                <td>Little Women</td>
+                <td>Louisa May Alcott</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>The Book Thief</td>
+                <td>Markus Zusak</td>
+                <td class="unavailable">Unavailable</td>
+                <td>Samuel Lee</td>
+                <td>2024-12-20</td>
+            </tr>
+            <tr>
+                <td>The Road</td>
+                <td>Cormac McCarthy</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Crime and Punishment</td>
+                <td>Fyodor Dostoevsky</td>
+                <td class="unavailable">Unavailable</td>
+                <td>Alex Johnson</td>
+                <td>2024-12-25</td>
+            </tr>
+            <tr>
+                <td>Jane Eyre</td>
+                <td>Charlotte Brontë</td>
+                <td>Available</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Note: Click on the headers to sort the table. Use the filter to view specific categories.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
